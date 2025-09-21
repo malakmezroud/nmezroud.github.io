@@ -3,265 +3,248 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nor Malak Mezroud | Resume</title>
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Nor Malak Mezroud - Resume</title>
   <style>
+    /* General Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
       background: #f4f6f9;
       color: #333;
+      line-height: 1.6;
       scroll-behavior: smooth;
     }
 
-    /* --- NAVBAR --- */
-    nav {
-      position: sticky;
-      top: 0;
-      background: #2c3e50;
-      padding: 12px 20px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      z-index: 1000;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #f1c40f;
-    }
-
-    /* --- HEADER --- */
+    /* Header */
     header {
-      background: linear-gradient(135deg, #2c3e50, #34495e);
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 50px 20px;
+      position: relative;
     }
-    header img {
+    .initials-circle {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      margin-bottom: 10px;
+      background: #ff7eb3;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+      font-weight: bold;
+      margin: 0 auto 15px auto;
       border: 3px solid white;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,126,179, 0.7); }
+      70% { box-shadow: 0 0 0 20px rgba(255,126,179, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,126,179, 0); }
     }
     header h1 {
-      margin: 0;
-      font-size: 2.4em;
+      font-size: 2.8em;
     }
     header p {
       font-size: 1.2em;
-      margin-top: 5px;
+      margin-top: 10px;
     }
     .resume-btn {
       display: inline-block;
-      padding: 10px 20px;
-      margin-top: 15px;
-      background: #2980b9;
+      padding: 12px 25px;
+      margin-top: 20px;
+      background: #ff7eb3;
       color: white;
-      border-radius: 5px;
+      border-radius: 25px;
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s ease, transform 0.2s ease;
     }
     .resume-btn:hover {
-      background: #1c5985;
+      background: #ff5277;
       transform: translateY(-3px);
     }
 
-    /* --- SECTIONS --- */
+    /* Navbar */
+    nav {
+      background: #2c3e50;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff7eb3;
+    }
+
+    /* Container */
     .container {
       max-width: 900px;
       margin: 20px auto;
       background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 6px;
-      margin-top: 25px;
+      color: #2575fc;
+      border-bottom: 3px solid #eee;
+      padding-bottom: 8px;
+      margin: 30px 0 15px;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin-bottom: 12px;
-    }
+    ul { list-style: none; padding: 0; }
+    li { margin-bottom: 10px; }
 
-    /* --- SKILLS --- */
-    .skills-list li {
-      font-size: 1.1em;
-      margin: 8px 0;
-    }
-    .skills-list i {
-      margin-right: 8px;
-      color: #2c3e50;
-    }
-
-    /* --- PROJECT CARDS --- */
+    /* Projects */
     .project {
-      margin-bottom: 15px;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      background: #fafafa;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #fceabb, #f8b500);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .project h3 {
-      margin: 0 0 5px;
-      color: #2980b9;
-    }
+    .project h3 { margin: 0 0 8px; color: #2c3e50; }
     .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      transform: translateY(-6px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
 
-    /* --- CONTACT ICONS --- */
-    .contact-links p {
-      margin: 10px 0;
-      font-size: 1.1em;
-    }
-    .contact-links a {
-      color: #2980b9;
-      text-decoration: none;
-      margin-left: 8px;
-      font-weight: bold;
-    }
-    .contact-links a:hover {
-      text-decoration: underline;
-    }
-    .contact-links i {
-      color: #2c3e50;
-      margin-right: 8px;
-    }
+    /* Contact links */
+    a { color: #2575fc; }
+    a:hover { text-decoration: underline; }
 
-    /* --- FOOTER --- */
+    /* Footer */
     footer {
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       background: #2c3e50;
       color: white;
-      margin-top: 25px;
+      margin-top: 30px;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
+  <!-- Header -->
+  <header>
+    <div class="initials-circle">NMM</div>
+    <h1>Nor Malak Mezroud</h1>
+    <p id="typing"></p>
+    <a href="resume.pdf" class="resume-btn" target="_blank">📄 Download Resume</a>
+  </header>
+
+  <!-- Navbar -->
   <nav>
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#certifications">Certifications</a>
-    <a href="#interests">Interests</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- HEADER -->
-  <header>
-    <img src="profile.jpg" alt="Profile Picture">
-    <h1>Nor Malak Mezroud</h1>
-    <p>Information Systems & Informatics Student | CUNY College of Staten Island 🎓</p>
-    <a href="resume.pdf" class="resume-btn" target="_blank">📄 Download Resume</a>
-  </header>
+  <!-- Main content -->
+  <div class="container">
+    <h2 id="about" class="fade-in">About Me</h2>
+    <p class="fade-in">Hello! I am a student at CUNY College of Staten Island majoring in Information Systems and Informatics (ISI). I am passionate about technology, problem-solving, and building skills for a career in IT and software development.</p>
 
-  <!-- ABOUT -->
-  <div class="container" id="about">
-    <h2>About Me</h2>
-    <p>Hello! I am a student at CUNY College of Staten Island majoring in Information Systems and Informatics (ISI). I am passionate about technology, problem-solving, and building skills for a career in IT and software development.</p>
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="container" id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>CUNY College of Staten Island</strong> – B.S. in Information Systems & Informatics (Expected Graduation: 202X)</li>
-      <li><strong>High School</strong> – (add your high school and graduation year)</li>
+    <h2 id="education" class="fade-in">Education</h2>
+    <ul class="fade-in">
+      <li><strong>CUNY College of Staten Island</strong> – B.S. in Information Systems & Informatics (Expected Graduation: 2027)</li>
+      <li><strong>High School</strong> – Add your high school and graduation year</li>
     </ul>
-  </div>
 
-  <!-- SKILLS -->
-  <div class="container" id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li><i class="fa-brands fa-python"></i>Programming: Python</li>
-      <li><i class="fa-brands fa-java"></i>Programming: Java</li>
-      <li><i class="fa-solid fa-code"></i>Programming: C++</li>
-      <li><i class="fa-brands fa-html5"></i>Web Development: HTML</li>
-      <li><i class="fa-brands fa-css3-alt"></i>Web Development: CSS</li>
-      <li><i class="fa-brands fa-js"></i>Web Development: JavaScript</li>
-      <li><i class="fa-solid fa-database"></i>Database Systems: SQL, MySQL</li>
-      <li><i class="fa-brands fa-git-alt"></i>Other: Git</li>
-      <li><i class="fa-brands fa-linux"></i>Other: Linux</li>
-      <li><i class="fa-solid fa-file-word"></i>Other: Microsoft Office</li>
+    <h2 id="skills" class="fade-in">Skills</h2>
+    <ul class="fade-in">
+      <li>Programming: Python, Java, C++</li>
+      <li>Web Development: HTML, CSS, JavaScript</li>
+      <li>Database Systems: SQL, MySQL</li>
+      <li>Other: Git, Linux, Microsoft Office</li>
     </ul>
-  </div>
 
-  <!-- PROJECTS -->
-  <div class="container" id="projects">
-    <h2>Projects</h2>
-    <div class="project">
+    <h2 id="projects" class="fade-in">Projects</h2>
+    <div class="project fade-in">
       <h3>Personal Resume Website</h3>
       <p>A personal website hosted on GitHub Pages to showcase my resume, skills, and interests.</p>
     </div>
-    <div class="project">
+    <div class="project fade-in">
       <h3>Database Project</h3>
       <p>Designed and implemented a student information management system using MySQL and SQL queries.</p>
     </div>
-    <div class="project">
+    <div class="project fade-in">
       <h3>Class Project / Internship</h3>
       <p>(Add description here — recruiters love seeing real-world or school projects!)</p>
     </div>
-  </div>
 
-  <!-- CERTIFICATIONS -->
-  <div class="container" id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Google IT Support Certificate (Coursera) ✔️</li>
-      <li>Python for Everybody (Coursera / EdX / Udemy)</li>
+    <h2 id="certifications" class="fade-in">Certifications</h2>
+    <ul class="fade-in">
+      <li>Google IT Support Certificate ✔️</li>
+      <li>Python for Everybody</li>
       <li>LinkedIn Learning – SQL Essential Training</li>
     </ul>
+
+    <h2 id="contact" class="fade-in">Contact</h2>
+    <p>Email: <a href="mailto:nor.mezroud@cix.csi.cuny.edu">nor.mezroud@cix.csi.cuny.edu</a> | <a href="mailto:normezroud@gmail.com">normezroud@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/your-linkedin" target="_blank">linkedin.com/in/your-linkedin</a></p>
   </div>
 
-  <!-- INTERESTS -->
-  <div class="container" id="interests">
-    <h2>Interests</h2>
-    <ul>
-      <li>Cybersecurity 🔐</li>
-      <li>Artificial Intelligence & Data Science 🤖</li>
-      <li>Web Development 🌐</li>
-      <li>Teamwork, leadership, and problem-solving</li>
-    </ul>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="container" id="contact">
-    <h2>Contact</h2>
-    <div class="contact-links">
-      <p><i class="fas fa-envelope"></i>Email (School): <a href="mailto:nor.mezroud@cix.csi.cuny.edu">nor.mezroud@cix.csi.cuny.edu</a></p>
-      <p><i class="fas fa-envelope"></i>Email (Personal): <a href="mailto:normezroud@gmail.com">normezroud@gmail.com</a></p>
-      <p><i class="fab fa-github"></i>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></p>
-      <p><i class="fab fa-linkedin"></i>LinkedIn: <a href="https://linkedin.com/in/your-linkedin" target="_blank">linkedin.com/in/your-linkedin</a></p>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer>
     <p>© 2025 Nor Malak Mezroud</p>
   </footer>
 
+  <!-- Scripts -->
+  <script>
+    // Typing Effect
+    const text = "Information Systems & Informatics Student | CUNY College of Staten Island 🎓";
+    let i = 0;
+    function typeEffect() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 50);
+      }
+    }
+    typeEffect();
+
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+
 </body>
 </html>
+
